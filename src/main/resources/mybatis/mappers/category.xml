@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper 
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="CategoryXML">
+
+	<!-- 쿼리문 작성 -->
+	<insert id="createCategory" parameterType="String">
+	<![CDATA[
+		INSERT 	INTO CATEGORY 
+		VALUES	(seq_category_no.nextval, #{id}, '미분류', '등록된 글이 없습니다.', sysdate)
+	]]>
+	</insert>
+
+	
+</mapper>
